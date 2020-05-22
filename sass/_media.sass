@@ -1,0 +1,44 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+@media (max-width: 1024px)
+	.nb-workouts
+		grid-template-columns: 30% 30% 30%
+	
+
+@media (max-width: 768px)
+	.nb-main-header
+		grid-template-columns: 90%
+		.nb-display-menu
+			grid-template-columns: 1fr 1fr
+			.nb-menu-item
+				padding: 20px
+	.nb-display 
+		font-size: 4rem
+	.nb-workouts
+		grid-template-columns: 45% 45%
+
+@media (max-width: 425px)
+	.nb-main-header
+		height: 150vh
+		grid-template-columns: 80%
+		&::before
+			height: 150vh
+		.nb-display-menu
+			grid-template-columns: 1fr
+			.nb-menu-item
+				padding: 20px
+		.nb-display-content
+			.nb-img
+				width: 100%
+			.nb-display 
+				font-size: 3rem
+	.nb-workouts
+		grid-template-columns: 80%
+
+@media (max-width: 1024px) and (orientation:landscape)
+	.nb-main-header
+		height: 200vh
+		&::before
+			height: 200vh

@@ -1,0 +1,214 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $primary
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.nb-img
+	display: block
+	max-width: 100%
+	height: auto
+	border-radius: 8px
+	&.img-width
+		width: 100%
+
+.nb-accent
+	color: $primary
+	font-weight: bold
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+h1,h2,h3,h4,h5,h6
+	font-family: "Oswald"
+
+.nb-display
+	font-size: 6rem
+	color: $secondary
+	text-transform: uppercase
+	letter-spacing: 2px
+
+.nb-h1,.nb-h2,.nb-h3
+	letter-spacing: 1px
+
+.nb-h1
+	font-size: 3rem
+
+.nb-h2
+	font-size: 2.5rem
+
+.nb-h3
+	font-size: 2rem
+
+.nb-container
+	display: grid
+	grid-gap: 16px
+	padding: 32px 0
+
+.nb-single-workout
+	.nb-display-content
+		.nb-img
+			width: 200px !important
+			background-color: #fff
+			padding: 16px
+
+.nb-main-header
+	grid-template-columns: 80%
+	background-position: center
+	background-size: cover
+	background-attachment: fixed
+	height: 100vh
+	justify-content: center
+	align-items: center
+	&::before
+		content: ''
+		top: 0
+		bottom: 0
+		left: 0
+		right: 0
+		position: absolute
+		height: 100vh
+		background-color: $secondary
+		opacity: .5
+	.nb-display-menu
+		z-index: 2
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr 1fr
+		.nb-menu-item
+			text-align: center
+			font-family: "Oswald"
+			position: relative
+			font-size: 18px
+			text-transform: uppercase
+			font-weight: bold
+			background-color: $secondary
+			padding: 32px
+			color: #fff
+			text-decoration: none
+			transition: .4s
+			overflow: hidden
+			&::before
+				content: ''
+				top: -50px
+				bottom: 0
+				right: -430px
+				position: absolute
+				width: 400px
+				height: 300px
+				background-color: $primary
+				transform: rotateZ(30deg)
+				transition: .4s
+			&:hover
+				background-color: lighten($secondary, 2%)
+				&::before
+					right: 0
+					opacity: 0
+
+	.nb-display-content
+		color: #fff
+		z-index: 2
+		.nb-display
+			display: inline-block
+			color: #fff
+			margin: 0
+		.nb-img
+			width: 300px			
+			box-shadow: 0 0 32px rgba(0,0,0,.64)
+
+.nb-btn 
+	display: inline-block
+	border: none
+	outline: none
+	background-color: $primary
+	padding: 12px 24px
+	border-radius: 8px
+	color: #fff
+	font-size: 14px
+	font-weight: bold
+	text-decoration: none
+	transition: .4s
+	&:hover
+		background-color: lighten($primary, 5%)
+		text-decoration: none
+		color: #fff
+
+.nb-main-footer
+	justify-content: center
+	align-items: center
+	background-color: darken($secondary, 5%)
+	color: #fff
+	text-align: center
+	text-transform: uppercase
+	letter-spacing: 2px
+	font-size: 14px
+	padding: 32px
+
+
+.nb-workouts
+	justify-content: center !important
+	grid-template-columns: 22% 22% 22% 22%
+	background-color: $secondary
+
+.nb-card
+	&:hover
+		box-shadow: 0 0 32px rgba(0,0,0,.32)
+		background-color: $secondary
+	transition: .4s
+	border-radius: 8px
+	background-color: lighten($secondary, 5%)
+	padding: 24px
+	.nb-card-img
+		background-color: #fff
+		border-radius: 8px
+		padding: 8px
+		width: 50%
+		margin-bottom: 16px
+	.nb-card-head
+		.nb-card-title
+			font-size: 20px
+			color: #fff
+			margin: 0
+		.nb-card-subtitle
+			font-size: 14px
+			text-transform: uppercase
+			color: $primary
+	.nb-card-content
+		color: #f4f4f4
+		padding-top: 8px
+		font-size: 14px
+	.nb-card-footer
+		padding-top: 16px
+		label
+			color: #fff
+			font-weight: bold
+			text-transform: uppercase
+			font-size: 14px
+			letter-spacing: 2px
+
+
+
+@import "media" // Always at the end
