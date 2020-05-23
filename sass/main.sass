@@ -25,6 +25,9 @@ body
 		&:required:valid
 			border-color: green
 
+.nb-mob	
+	display: none
+
 .nb-img
 	display: block
 	max-width: 100%
@@ -137,6 +140,7 @@ h1,h2,h3,h4,h5,h6
 		z-index: 2
 		display: grid
 		grid-template-columns: 1fr 1fr 1fr 1fr
+		border-bottom: 5px solid $primary
 		.nb-menu-item:nth-child(odd)
 			background-color: darken($secondary, 5%)
 		.nb-menu-item
@@ -147,7 +151,7 @@ h1,h2,h3,h4,h5,h6
 			// text-transform: uppercase
 			font-weight: bold
 			background-color: $secondary
-			padding: 32px
+			padding: 32px 0
 			color: #fff
 			text-decoration: none
 			transition: .4s
@@ -156,7 +160,7 @@ h1,h2,h3,h4,h5,h6
 				content: ''
 				top: -50px
 				bottom: 0
-				right: -430px
+				right: -440px
 				position: absolute
 				width: 400px
 				height: 300px
