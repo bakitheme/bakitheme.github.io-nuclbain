@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>NuclBain Workouts</title>
+	<title>Тренування</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,6 +21,7 @@
 	<meta name="theme-color" content="#000">
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
 	
 </head>
 
@@ -34,12 +35,12 @@
 			<a href="#" class="nb-menu-item">Instagram</a>
 		</div>
 		<div class="nb-display-content">
-			<img src="img/dist/nucl.jpg" alt="nucl" class="nb-img">
-			<h1 class="nb-display"><span class="nb-accent">Work</span>outs</h1>
+			<img src="img/dist/nucl.jpg" alt="nucl" class="nb-img wow animate__fadeInDown" data-wow-duration="2s">
+			<h1 class="nb-display nb-typed"></h1>
 		</div>
 	</header>
 	<div class="nb-container nb-workouts">
-		<div class="nb-card">
+		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<img src="img/i/4.png" alt="" class="nb-card-img">
 			<div class="nb-card-head">
 				<h1 class="nb-card-title">Базове тренування спини</h1>
@@ -52,7 +53,7 @@
 				<a href="basic-back-workout.html" class="nb-btn">Розпочати</a>
 			</div>
 		</div>
-		<div class="nb-card">
+		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
 			<img src="img/i/5.png" alt="" class="nb-card-img">
 			<div class="nb-card-head">
 				<h1 class="nb-card-title">Базове тренування грудних</h1>
@@ -70,6 +71,13 @@
 		<p><span class="nb-accent">nuclbain</span> | created by <span class="nb-accent">Denis Vakar</span></p>
 	</footer>
 	<script src="js/scripts.min.js"></script>
+	<script>
+		new WOW().init();
 
+		var typed = new Typed('.nb-typed', {
+			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай</span>."],
+			typeSpeed: 50
+		});
+	</script>
 </body>
 </html>

@@ -4,25 +4,49 @@
 /*==========  Desktop First  ==========*/
 @media (max-width: 1024px)
 	.nb-workouts
-		grid-template-columns: 30% 30% 30%
+		// grid-template-columns: 30% 30% 30%
 	
 
 @media (max-width: 768px)
+	.nb-single-workout
+		padding: 32px !important
+		.nb-display-content
+			grid-template-columns: 1fr 1fr
+			.nb-btn
+				text-align: center
+				width: 100% !important
 	.nb-main-header
-		grid-template-columns: 90%
+		// grid-template-columns: 100%
+
 		.nb-display-menu
 			grid-template-columns: 1fr 1fr
 			.nb-menu-item
-				padding: 20px
+				// padding: 20px
 	.nb-display 
 		font-size: 4rem
 	.nb-workouts
-		grid-template-columns: 45% 45%
+		grid-template-columns: 50% 50%
 
 @media (max-width: 425px)
+	.nb-h1
+		font-size: 2.5rem
+
+	.nb-h2
+		font-size: 2rem
+
+	.nb-h3
+		font-size: 1.5rem
+	.nb-single-workout
+		height: 175vh !important
+		padding: 16px !important
+		&::before
+			height: 175vh !important
+		.nb-display-content
+			grid-template-columns: 1fr
+
 	.nb-main-header
 		height: 150vh
-		grid-template-columns: 80%
+		grid-template-columns: 100%
 		&::before
 			height: 150vh
 		.nb-display-menu
@@ -30,12 +54,13 @@
 			.nb-menu-item
 				padding: 20px
 		.nb-display-content
+			padding: 0 16px
 			.nb-img
 				width: 100%
 			.nb-display 
 				font-size: 3rem
 	.nb-workouts
-		grid-template-columns: 80%
+		grid-template-columns: 100%
 
 @media (max-width: 1024px) and (orientation:landscape)
 	.nb-main-header
