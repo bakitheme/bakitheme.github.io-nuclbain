@@ -8,9 +8,12 @@
 	
 
 @media (max-width: 768px)
+	.nb-lotery
+		grid-template-columns: 1fr 1fr 1fr
+	.controls
+		grid-template-columns: 1fr 1fr 1fr
 	.nb-article
 		grid-template-columns: 80%
-
 	.nb-mob
 		display: inline-block !important
 	.nb-desc
@@ -35,6 +38,8 @@
 		grid-template-columns: 50% 50%
 
 @media (max-width: 425px)
+	.controls,.nb-lotery
+		grid-template-columns: 1fr
 	.nb-article
 		grid-template-columns: 90%
 	.nb-h1

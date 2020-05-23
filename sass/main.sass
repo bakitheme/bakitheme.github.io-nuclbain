@@ -10,6 +10,8 @@
 	color: #fff
 
 body
+	margin: 0
+	padding: 0
 	font-size: 16px
 	min-width: 320px
 	position: relative
@@ -118,12 +120,14 @@ h1,h2,h3,h4,h5,h6
 				background-color: $secondary
 				color: #fff
 		.nb-img
+			box-sizing: border-box
 			z-index: 1
 			width: 100% !important
 			background-color: #fff
 			padding: 64px
 
 .nb-main-header
+	box-sizing: border-box
 	grid-template-columns: 100%
 	grid-template-rows: auto 1fr
 	background-position: center
@@ -196,7 +200,8 @@ h1,h2,h3,h4,h5,h6
 			width: 300px			
 			box-shadow: 0 0 32px rgba(0,0,0,.64)
 
-.nb-btn 
+.nb-btn
+	box-sizing: border-box
 	display: inline-block
 	border: none
 	outline: none
@@ -272,6 +277,51 @@ h1,h2,h3,h4,h5,h6
 			text-transform: uppercase
 			font-size: 14px
 			letter-spacing: 2px
+
+.controls
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	.control:nth-child(odd)
+		background-color: darken($primary,5%)
+		&:hover
+			background-color: lighten($primary,5%)
+	.control
+		text-align: left
+		padding: 32px
+		font-size: 16px
+		font-family: $default-font
+		&:hover
+			box-shadow: 0 0 16px rgba(0,0,0,.16)
+	
+.nb-lotery
+	background-color: $secondary
+	padding: 0
+	grid-template-columns: 1fr 1fr 1fr 1fr
+	.nb-card:nth-child(1)
+		background-color: #fff
+		position: relative
+		.nb-card-title
+			color: $secondary
+		&::before
+			content: 'Тобі випало'
+			position: absolute
+			right: 0
+			top: 0
+			padding: 16px
+			background-color: $primary
+			color: #fff
+			text-transform: uppercase
+
+
+
+.nb-lotery-controls
+	background-color: $secondary
+	padding: 0
+	grid-template-columns: 100% !important
+	.control
+		text-align: center !important
+	.icon
+		color: #fff !important
 
 
 

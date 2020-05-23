@@ -39,8 +39,36 @@
 			<h1 class="nb-display nb-typed"></h1>
 		</div>
 	</header>
-	<div class="nb-container nb-workouts">
-		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
+	<div class="controls">
+            <button type="button" class="control nb-btn" data-filter="all">Всі</button>
+            <button type="button" class="control nb-btn" data-filter=".back">Спина</button>
+            <button type="button" class="control nb-btn" data-filter=".chest">Грудні</button>
+            <button type="button" class="control nb-btn" data-filter=".shoulders">Плечі</button>
+            <button type="button" class="control nb-btn" data-filter=".core">Кор</button>
+            <button type="button" class="control nb-btn" data-filter=".legs">Ноги</button>
+            <button type="button" class="control nb-btn" data-filter=".mixed">Змішані</button>
+            <button type="button" class="control nb-btn" data-filter=".fullbody">Все тіло</button>
+            <button type="button" class="control nb-btn" data-filter=".cardio">Кардіо</button>
+            <button type="button" class="control nb-btn" data-filter=".challenge">Виклики</button>
+
+            <button type="button" class="control nb-btn" data-sort="default:asc">Зростання</button>
+            <button type="button" class="control nb-btn" data-sort="default:desc">Спадання</button>
+    </div>
+	<div class="nb-container container nb-workouts">
+		<div class="nb-card mix challenge">
+			<img src="img/i/1.png" alt="" class="nb-card-img">
+			<div class="nb-card-head">
+				<h1 class="nb-card-title">Лотерея Накла</h1>
+				<h2 class="nb-card-subtitle">Виклик</h2>
+			</div>
+			<div class="nb-card-content">
+				<p>Збирай друзів, натискайте на кнопку по черзі і виконуйте випадково вибрану вправу. Весела гра для спортивної компанії</p>
+			</div>
+			<div class="nb-card-footer">
+				<a href="lotery.html" class="nb-btn">Розпочати</a>
+			</div>
+		</div>
+		<div class="nb-card mix back">
 			<img src="img/i/4.png" alt="" class="nb-card-img">
 			<div class="nb-card-head">
 				<h1 class="nb-card-title">Базове тренування спини</h1>
@@ -53,7 +81,7 @@
 				<a href="basic-back-workout.html" class="nb-btn">Розпочати</a>
 			</div>
 		</div>
-		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
+		<div class="nb-card mix chest">
 			<img src="img/i/5.png" alt="" class="nb-card-img">
 			<div class="nb-card-head">
 				<h1 class="nb-card-title">Базове тренування грудних</h1>
@@ -72,10 +100,16 @@
 	</footer>
 	<script src="js/scripts.min.js"></script>
 	<script>
+		//mixitup init
+		var containerEl = document.querySelector('.container');
+        var mixer = mixitup(containerEl);
+
+        //wow init
 		new WOW().init();
 
+		//typed creation
 		var typed = new Typed('.nb-typed', {
-			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай</span>."],
+			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай.</span>"],
 			typeSpeed: 50
 		});
 	</script>

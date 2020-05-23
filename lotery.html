@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<!-- <base href="/"> -->
+
+	<title>Лотерея Накла — Розпочати</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	<!-- Template Basic Images Start -->
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="icon" href="img/favicon/i.png">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/i.png">
+	<!-- Template Basic Images End -->
+	
+	<!-- Custom Browsers Color Start -->
+	<meta name="theme-color" content="#000">
+	<!-- Custom Browsers Color End -->
+	<link rel="stylesheet" href="css/main.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+	
+</head>
+
+<body>
+
+	<header style="background-image: url('img/dist/1.jpg');" class="nb-container nb-main-header nb-single-workout">
+		<div class="nb-display-content wow animate__fadeInDown" data-wow-duration="2s">
+			<img src="img/i/1.png" alt="nucl" class="nb-img">
+			<div class="nb-group">
+				<h1 class="nb-h2">Виклик</h1>
+				<h3 class="nb-h3">Лотерея Накла</h3>
+				<p>Збирай друзів, натискайте на кнопку по черзі і виконуйте випадково вибрану вправу. Весела гра для спортивної компанії. Натискайте на кнопку, вправа яку ви маєте виконати виділиться червоним.</p>
+				<a href="index.html" class="nb-btn">Головна</a>
+				<a href="#goto" class="nb-btn">Розпочати</a>
+			</div>
+		</div>
+	</header>
+	<div id="goto" class="controls nb-lotery-controls">
+		<button type="button" class="control nb-btn" data-sort="random"><span class="icon icon-Play"></span></button>
+    </div>
+	<div class="nb-container container nb-lotery">
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">20 разів</h1>
+				<h2 class="nb-card-subtitle">Віджимання</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">30 разів</h1>
+				<h2 class="nb-card-subtitle">Присідання</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">15 разів</h1>
+				<h2 class="nb-card-subtitle">Підтягування</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">20 разів</h1>
+				<h2 class="nb-card-subtitle">Віджимання на брусах</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">15 разів</h1>
+				<h2 class="nb-card-subtitle">Підйом ніг у висі</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">15 разів</h1>
+				<h2 class="nb-card-subtitle">Випади</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">10 разів</h1>
+				<h2 class="nb-card-subtitle">Підтягування зворотнім хватом</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">5 разів</h1>
+				<h2 class="nb-card-subtitle">Присідання</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">3 рази</h1>
+				<h2 class="nb-card-subtitle">Віджимання на одній руці</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">10 разів</h1>
+				<h2 class="nb-card-subtitle">Віджимання на брусах</h2>
+			</div>
+		</div>
+		<div class="nb-card mix challenge">
+			<div class="nb-card-head">
+				<span class="icon icon-Info"></span>
+				<h1 class="nb-card-title">25 разів</h1>
+				<h2 class="nb-card-subtitle">Віджимання</h2>
+			</div>
+		</div>
+	</div>
+	<footer class="nb-container nb-main-footer">
+		<p><span class="nb-accent">nuclbain</span> | created by <span class="nb-accent">Denis Vakar</span></p>
+	</footer>
+	<script src="js/scripts.min.js"></script>
+	<script>
+		//mixitup init
+		var containerEl = document.querySelector('.container');
+        var mixer = mixitup(containerEl);
+
+		new WOW().init();
+
+		var typed = new Typed('.nb-typed', {
+			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай</span>."],
+			typeSpeed: 50
+		});
+	</script>
+</body>
+</html>
