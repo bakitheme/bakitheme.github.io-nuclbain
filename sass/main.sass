@@ -53,6 +53,95 @@ b, strong
 h1,h2,h3,h4,h5,h6
 	// font-family: "Oswald"
 
+.loaded
+	.nb-preloader
+		display: none
+
+.loaded_hiding 
+	.nb-preloader 
+		transition: 1s opacity
+		opacity: 0
+
+.nb-preloader
+	position: fixed
+	display: flex
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background-color: $secondary
+	z-index: 1000
+	align-items: center
+	justify-content: center
+	.nb-rotated
+
+		background-image: url('../img/dist/nucl.jpg')
+		background-size: cover
+		border-radius: 50%
+		width: 100px
+		height: 100px
+		position: absolute
+		animation: puls 1s infinite ease-in-out
+	.nb-shifted
+		height: 0
+		width: 0
+		background-color: #fff
+		height: 100%
+		animation: shift 3s infinite ease-in-out
+
+@keyframes puls 
+  	0%
+	    box-shadow: 0 0 64px rgb(0,0,0)
+
+@keyframes shift
+	100%
+		width: 100%
+
+
+.nb-checkbox-container
+	display: block
+	position: relative
+	padding: 16px
+	cursor: pointer
+	font-size: 16px
+	user-select: none
+	z-index: 2 !important
+	transition: .4s
+	width: 50%
+	background-color: #fff
+	color: $secondary !important
+	&:hover
+		color: $primary !important
+		input ~ .nb-checkmark
+			background-color: $secondary
+	input:checked ~ .nb-checkmark
+		background-color: lighten($primary,5%)
+		height: 100%
+		&::before
+			content: 'Виконано'
+			position: absolute
+			top: 50%
+			line-height: 0
+			font-size: 16px
+			left: 16px
+			color: $secondary
+	.nb-checkmark
+		z-index: 1 !important
+		transition: .4s
+		position: absolute
+		top: 0
+		left: 0
+		height: 0
+		width: 100%
+		background-color: #fff	
+	input
+		position: absolute
+		opacity: 0
+		cursor: pointer
+		height: 0
+		width: 0
+
+
 .nb-display
 	font-size: 5rem
 	color: $secondary
@@ -240,6 +329,23 @@ h1,h2,h3,h4,h5,h6
 			box-shadow: 0 0 32px rgba(0,0,0,.32)
 			background-color: $primary
 
+.nb-badge
+	background-color: darken($primary,5%)
+	display: inline-block
+	padding: 4px 8px
+	color: #fff
+
+.nb-exersices
+	.nb-card:nth-child(1)
+		background-color: #fff
+		.nb-card-head
+			.nb-card-title
+				font-size: 26px
+				color: #000 !important
+		.nb-card-content
+			font-size: 16px
+			color: $secondary !important
+
 .nb-card
 	&:hover
 		box-shadow: 0 0 32px rgba(0,0,0,.32)
@@ -286,6 +392,7 @@ h1,h2,h3,h4,h5,h6
 		&:hover
 			background-color: lighten($primary,5%)
 	.control
+		cursor: pointer
 		text-align: left
 		padding: 32px
 		font-size: 16px
