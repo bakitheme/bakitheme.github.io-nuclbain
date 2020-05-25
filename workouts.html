@@ -43,20 +43,20 @@
 		</div>
 	</header>
 	<div class="controls">
-            <button type="button" class="control nb-btn" data-filter="all">Всі</button>
-            <button type="button" class="control nb-btn" data-filter=".back">Спина</button>
-            <button type="button" class="control nb-btn" data-filter=".chest">Грудні</button>
-            <button type="button" class="control nb-btn" data-filter=".shoulders">Плечі</button>
-            <button type="button" class="control nb-btn" data-filter=".core">Кор</button>
-            <button type="button" class="control nb-btn" data-filter=".legs">Ноги</button>
-            <button type="button" class="control nb-btn" data-filter=".mixed">Змішані</button>
-            <button type="button" class="control nb-btn" data-filter=".fullbody">Все тіло</button>
-            <button type="button" class="control nb-btn" data-filter=".cardio">Кардіо</button>
-            <button type="button" class="control nb-btn" data-filter=".challenge">Виклики</button>
+		<button type="button" class="control nb-btn" data-filter="all">Всі</button>
+		<button type="button" class="control nb-btn" data-filter=".back">Спина</button>
+		<button type="button" class="control nb-btn" data-filter=".chest">Грудні</button>
+		<button type="button" class="control nb-btn" data-filter=".shoulders">Плечі</button>
+		<button type="button" class="control nb-btn" data-filter=".core">Кор</button>
+		<button type="button" class="control nb-btn" data-filter=".legs">Ноги</button>
+		<button type="button" class="control nb-btn" data-filter=".mixed">Змішані</button>
+		<button type="button" class="control nb-btn" data-filter=".fullbody">Все тіло</button>
+		<button type="button" class="control nb-btn" data-filter=".cardio">Кардіо</button>
+		<button type="button" class="control nb-btn" data-filter=".challenge">Виклики</button>
 
-            <button type="button" class="control nb-btn" data-sort="default:asc">Зростання</button>
-            <button type="button" class="control nb-btn" data-sort="default:desc">Спадання</button>
-    </div>
+		<button type="button" class="control nb-btn" data-sort="default:asc">Зростання</button>
+		<button type="button" class="control nb-btn" data-sort="default:desc">Спадання</button>
+	</div>
 	<div class="nb-container container nb-workouts">
 		<div class="nb-card mix challenge">
 			<img src="img/i/1.png" alt="" class="nb-card-img">
@@ -116,18 +116,29 @@
 	</footer>
 	<script src="js/scripts.min.js"></script>
 	<script>
+		//preloader
+		window.onload = function () {
+			document.body.classList.add('loaded_hiding');
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+			}, 500);
+		}
+
 		//mixitup init
 		var containerEl = document.querySelector('.container');
-        var mixer = mixitup(containerEl);
+		var mixer = mixitup(containerEl);
 
         //wow init
-		new WOW().init();
+        new WOW().init();
 
 		//typed creation
 		var typed = new Typed('.nb-typed', {
 			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай.</span>"],
 			typeSpeed: 50
 		});
+
+
 	</script>
 </body>
 </html>

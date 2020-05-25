@@ -48,12 +48,21 @@
 	</footer>
 	<script src="js/scripts.min.js"></script>
 	<script>
+		//preloader
+		window.onload = function () {
+			document.body.classList.add('loaded_hiding');
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+			}, 500);
+		}
+
 		new WOW().init();
 
 		var typed = new Typed('.nb-typed', {
 			strings: ["Train <span class='nb-accent'>hard.</span>", "<span class='nb-accent'>nucl</span>bain.","Щоб почати, натисни на <span class='nb-accent'>play.</span>"],
 			typeSpeed: 50
-		});		
+		});	
 	</script>
 </body>
 </html>

@@ -45,7 +45,7 @@
 	</header>
 	<div id="goto" class="controls nb-lotery-controls">
 		<button type="button" class="control nb-btn" data-sort="random"><span class="icon icon-Play"></span></button>
-    </div>
+	</div>
 	<div class="nb-container container nb-lotery">
 		<div class="nb-card mix challenge">
 			<div class="nb-card-head">
@@ -130,9 +130,18 @@
 	</footer>
 	<script src="js/scripts.min.js"></script>
 	<script>
+		//preloader
+		window.onload = function () {
+			document.body.classList.add('loaded_hiding');
+			window.setTimeout(function () {
+				document.body.classList.add('loaded');
+				document.body.classList.remove('loaded_hiding');
+			}, 500);
+		}
+
 		//mixitup init
 		var containerEl = document.querySelector('.container');
-        var mixer = mixitup(containerEl);
+		var mixer = mixitup(containerEl);
 
 		new WOW().init();
 
@@ -140,6 +149,8 @@
 			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай</span>."],
 			typeSpeed: 50
 		});
+
+
 	</script>
 </body>
 </html>
