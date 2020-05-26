@@ -203,22 +203,22 @@
 		<p><span class="nb-accent">nuclbain</span> | created by <span class="nb-accent">Denis Vakar</span></p>
 	</footer>
 	<div class="nb-modal tingle-demo-big-1">
-		<video src="video/1.mp4" width="320px" autoplay muted loop></video>
+		<video src="video/1.mp4" preload="none" poster="img/dist/2.jpg" width="320px" controls muted></video>
 	</div>
 	<div class="nb-modal tingle-demo-big-2">
-		<video src="video/9.mp4" width="320px" autoplay muted loop></video>
+		<video src="video/9.mp4" preload="none" poster="img/dist/2.jpg" width="320px" controls muted></video>
 	</div>
 	<div class="nb-modal tingle-demo-big-3">
-		<video src="video/8.mp4" width="320px" autoplay muted loop></video>
+		<video src="video/8.mp4" preload="none" poster="img/dist/2.jpg" width="320px" controls muted></video>
 	</div>
 	<div class="nb-modal tingle-demo-big-4">
-		<video src="video/6.mp4" width="320px" autoplay muted loop></video>
+		<video src="video/6.mp4" preload="none" poster="img/dist/2.jpg" width="320px" controls muted></video>
 	</div>
 	<div class="nb-modal tingle-demo-big-5">
-		<video src="video/3.mp4" width="320px" autoplay muted loop></video>
+		<video src="video/3.mp4" preload="none" poster="img/dist/2.jpg" width="320px" controls muted></video>
 	</div>
 	<div class="nb-modal tingle-demo-big-6">
-		<video src="video/4.mp4" width="320px" autoplay muted loop></video>
+		<video src="video/4.mp4" preload="none" poster="img/dist/2.jpg" width="320px" controls muted></video>
 	</div>
 	<script src="js/scripts.min.js"></script>
 	<script>
@@ -267,12 +267,12 @@
 		});
 		ex_five.setContent(document.querySelector('.tingle-demo-big-5').innerHTML);
 
-		var ex_four = new tingle.modal();
+		var ex_six = new tingle.modal();
 		var btn = document.querySelector('.js-tingle-modal-6');
 		btn.addEventListener('click', function(){
-			ex_four.open();
+			ex_six.open();
 		});
-		ex_four.setContent(document.querySelector('.tingle-demo-big-6').innerHTML);
+		ex_six.setContent(document.querySelector('.tingle-demo-big-6').innerHTML);
 
 		//wow init
 		new WOW().init();
