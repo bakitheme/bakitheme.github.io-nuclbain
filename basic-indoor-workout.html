@@ -23,15 +23,6 @@
 	<!-- Custom Browsers Color End -->
 	<link rel="stylesheet" href="css/main.min.css">
 	<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
-	<style>
-            #btn-close-modal {
-                width:100%;
-                text-align: center;
-                cursor:pointer;
-                color:#fff;
-            }
-
-        </style>
 </head>
 
 <body>
@@ -98,7 +89,7 @@
 		</div>
 		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<div class="nb-card-head">
-				<span class="icon icon-Media"></span>
+				<span class="icon icon-Media active js-tingle-modal-3"></span>
 				<h1 class="nb-card-title">Віджимання</h1>
 				<h2 class="nb-card-subtitle">3 х 20-25</h2>
 			</div>
@@ -114,7 +105,7 @@
 		</div>
 		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<div class="nb-card-head">
-				<span class="icon icon-Media"></span>
+				<span class="icon icon-Media active js-tingle-modal-2"></span>
 				<h1 class="nb-card-title">Присідання з почерговим випадом</h1>
 				<h2 class="nb-card-subtitle">3 х 12-15</h2>
 			</div>
@@ -130,7 +121,7 @@
 		</div>
 		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<div class="nb-card-head">
-				<span class="icon icon-Media"></span>
+				<span class="icon icon-Media active js-tingle-modal-1"></span>
 				<h1 class="nb-card-title">Віджимання вниз головою</h1>
 				<h2 class="nb-card-subtitle">3 х 8-12</h2>
 			</div>
@@ -146,7 +137,7 @@
 		</div>
 		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<div class="nb-card-head">
-				<span class="icon icon-Media"></span>
+				<span class="icon icon-Media active js-tingle-modal-4"></span>
 				<h1 class="nb-card-title">Випади Стрибком</h1>
 				<h2 class="nb-card-subtitle">3 х 8-12</h2>
 			</div>
@@ -162,7 +153,7 @@
 		</div>
 		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<div class="nb-card-head">
-				<span class="icon icon-Media"></span>
+				<span class="icon icon-Media active js-tingle-modal-5"></span>
 				<h1 class="nb-card-title">Скручування</h1>
 				<h2 class="nb-card-subtitle">3 х 20-50</h2>
 			</div>
@@ -178,7 +169,7 @@
 		</div>
 		<div class="nb-card wow animate__fadeInLeft" data-wow-duration="1s">
 			<div class="nb-card-head">
-				<span class="icon icon-Media"></span>
+				<span class="icon icon-Media active js-tingle-modal-6"></span>
 				<h1 class="nb-card-title">Планка</h1>
 				<h2 class="nb-card-subtitle">3 х 1хв</h2>
 			</div>
@@ -211,15 +202,24 @@
 	<footer class="nb-container nb-main-footer">
 		<p><span class="nb-accent">nuclbain</span> | created by <span class="nb-accent">Denis Vakar</span></p>
 	</footer>
-	<div id="modal-1">
-		<img src="img/dist/1.jpg" style="display: none;" alt="" width="640">
+	<div class="nb-modal tingle-demo-big-1">
+		<video src="video/1.mp4" width="320px" autoplay muted loop></video>
 	</div>
-	 <div class="modal">
-      <div class="modal-inner">
-        <span data-modal-close>&times;</span>
-        <div class="modal-content"></div>
-      </div>
-    </div>
+	<div class="nb-modal tingle-demo-big-2">
+		<video src="video/9.mp4" width="320px" autoplay muted loop></video>
+	</div>
+	<div class="nb-modal tingle-demo-big-3">
+		<video src="video/8.mp4" width="320px" autoplay muted loop></video>
+	</div>
+	<div class="nb-modal tingle-demo-big-4">
+		<video src="video/6.mp4" width="320px" autoplay muted loop></video>
+	</div>
+	<div class="nb-modal tingle-demo-big-5">
+		<video src="video/3.mp4" width="320px" autoplay muted loop></video>
+	</div>
+	<div class="nb-modal tingle-demo-big-6">
+		<video src="video/4.mp4" width="320px" autoplay muted loop></video>
+	</div>
 	<script src="js/scripts.min.js"></script>
 	<script>
 		//preloader
@@ -230,14 +230,58 @@
 				document.body.classList.remove('loaded_hiding');
 			}, 500);
 		}
-		
+
+		//tingle modal init
+		var ex_one = new tingle.modal();
+		var btn = document.querySelector('.js-tingle-modal-1');
+		btn.addEventListener('click', function(){
+			ex_one.open();
+		});
+		ex_one.setContent(document.querySelector('.tingle-demo-big-1').innerHTML);
+
+		var ex_two = new tingle.modal();
+		var btn = document.querySelector('.js-tingle-modal-2');
+		btn.addEventListener('click', function(){
+			ex_two.open();
+		});
+		ex_two.setContent(document.querySelector('.tingle-demo-big-2').innerHTML);
+
+		var ex_three = new tingle.modal();
+		var btn = document.querySelector('.js-tingle-modal-3');
+		btn.addEventListener('click', function(){
+			ex_three.open();
+		});
+		ex_three.setContent(document.querySelector('.tingle-demo-big-3').innerHTML);
+
+		var ex_four = new tingle.modal();
+		var btn = document.querySelector('.js-tingle-modal-4');
+		btn.addEventListener('click', function(){
+			ex_four.open();
+		});
+		ex_four.setContent(document.querySelector('.tingle-demo-big-4').innerHTML);
+
+		var ex_five = new tingle.modal();
+		var btn = document.querySelector('.js-tingle-modal-5');
+		btn.addEventListener('click', function(){
+			ex_five.open();
+		});
+		ex_five.setContent(document.querySelector('.tingle-demo-big-5').innerHTML);
+
+		var ex_four = new tingle.modal();
+		var btn = document.querySelector('.js-tingle-modal-6');
+		btn.addEventListener('click', function(){
+			ex_four.open();
+		});
+		ex_four.setContent(document.querySelector('.tingle-demo-big-6').innerHTML);
+
+		//wow init
 		new WOW().init();
 
+		//typed js init
 		var typed = new Typed('.nb-typed', {
 			strings: ["Почнемо <span class='nb-accent'>тренування?</span>", "<span class='nb-accent'>Вибирай</span>."],
 			typeSpeed: 50
 		});
-
 
 	</script>
 </body>

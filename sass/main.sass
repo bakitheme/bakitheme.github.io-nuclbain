@@ -27,6 +27,8 @@ body
 		&:required:valid
 			border-color: green
 
+//default styles
+
 .nb-video
 	width: 100%
 
@@ -168,6 +170,34 @@ h1,h2,h3,h4,h5,h6
 	grid-template-columns: 60%
 	justify-content: center
 
+//tingle plugin styles
+.nb-modal
+	display: none
+	position: relative
+	box-sizing: border-box
+	video
+		box-sizing: border-box
+		width: 100%
+		box-shadow: 0 0 32px rgba(0,0,0,.32)
+
+.tingle-modal__close
+	width: 20px
+	height: 20px
+
+.tingle-modal-box 
+	position: relative
+	border-radius: 0
+	width: auto
+	padding: 0 !important
+	background-color: transparent
+
+.tingle-modal-box__content
+	padding: 0 !important
+	height: auto !important
+
+.tingle-modal-box__footer
+	padding: 0 !important
+
 .nb-single-workout
 	grid-template-rows: 100% !important
 	width: 100%
@@ -181,8 +211,10 @@ h1,h2,h3,h4,h5,h6
 		&:hover
 			background-color: lighten($secondary, 5%)
 			&::before
-				top: -300px
-				width: 250px
+				top: 0px
+				width: 1000px
+				height: 1000px
+				opacity: 0
 		&::before
 			transition: .4s
 			z-index: 0
@@ -351,6 +383,8 @@ h1,h2,h3,h4,h5,h6
 		box-shadow: 0 0 32px rgba(0,0,0,.32)
 		background-color: $primary
 		.nb-card-head
+			.active
+				color: #fff
 			.nb-card-subtitle
 				color: $secondary
 	transition: .4s
@@ -362,6 +396,10 @@ h1,h2,h3,h4,h5,h6
 		width: 50%
 		margin-bottom: 16px
 	.nb-card-head
+		.active
+			cursor: pointer
+			color: $primary
+			transition: .4s
 		.nb-card-title
 			font-size: 20px
 			color: #fff
