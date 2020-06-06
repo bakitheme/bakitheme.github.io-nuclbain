@@ -453,10 +453,23 @@ h1,h2,h3,h4,h5,h6
 		padding: 128px 32px
 		background-color: #fff
 		position: relative
+		.icon
+			display: none
 		.nb-card-title
+			font-size: 64px
 			color: $secondary
+		.nb-card-subtitle
+			font-size: 32px
 		&::before
-			content: 'Тобі випало'
+			content: '\e645'
+			font-family: 'Stroke-Gap-Icons';
+			speak: none
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			line-height: 1
+			font-size: 32px
 			position: absolute
 			text-align: center
 			width: 100%
