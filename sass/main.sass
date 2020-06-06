@@ -438,6 +438,8 @@ h1,h2,h3,h4,h5,h6
 		padding: 32px
 		font-size: 16px
 		font-family: $default-font
+		&:focus
+			outline: none
 		&:hover
 			box-shadow: 0 0 16px rgba(0,0,0,.16)
 	
@@ -445,7 +447,10 @@ h1,h2,h3,h4,h5,h6
 	background-color: $secondary
 	padding: 0
 	grid-template-columns: 1fr 1fr 1fr 1fr
-	.nb-card:nth-child(1)
+	.nb-card:first-child
+		grid-column: 1 / 5
+		text-align: center
+		padding: 128px 0
 		background-color: #fff
 		position: relative
 		.nb-card-title
@@ -453,9 +458,11 @@ h1,h2,h3,h4,h5,h6
 		&::before
 			content: 'Тобі випало'
 			position: absolute
+			text-align: center
+			width: 100%
 			right: 0
 			top: 0
-			padding: 16px
+			padding: 32px 0
 			background-color: $primary
 			color: #fff
 			text-transform: uppercase
@@ -465,9 +472,15 @@ h1,h2,h3,h4,h5,h6
 .nb-lotery-controls
 	background-color: $secondary
 	padding: 0
-	grid-template-columns: 100% !important
+	.control:last-child
+		background-color: $primary !important
+		grid-column: 1 / 5
 	.control
+		background-color: $primary !important
 		text-align: center !important
+		&:hover
+			background-color: $secondary !important
+			color: #fff
 	.icon
 		color: #fff !important
 
